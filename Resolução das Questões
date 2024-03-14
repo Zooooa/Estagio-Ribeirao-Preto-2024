@@ -1,0 +1,133 @@
+1) Observe o trecho de código abaixo:
+
+int INDICE = 13, SOMA = 0, K = 0;
+
+enquanto K < INDICE faça
+
+{
+
+K = K + 1;
+
+SOMA = SOMA + K;
+
+}
+
+imprimir(SOMA);
+
+
+
+Ao final do processamento, qual será o valor da variável SOMA?
+
+Resposta: 12
+
+
+
+
+2) Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência.
+
+
+
+IMPORTANTE:
+
+Esse número pode ser informado através de qualquer entrada de sua preferência ou pode ser previamente definido no código;
+
+Resposta:
+
+
+import java.util.Scanner;
+
+import java.util.Scanner;
+
+class Fibonacci {
+
+    static boolean is_perfect_square(int n) {
+        int sq = (int) Math.sqrt(n);
+        return (sq * sq == n);
+    }
+
+    static boolean isfibonacci(int n) {
+        return is_perfect_square(5 * n * n + 4) || is_perfect_square(5 * n * n - 4);
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the Number : ");
+        int num = input.nextInt();
+        if (num > 0) {
+            System.out.println("Is Fibonacci Number ? " + isfibonacci(num));
+        }
+    }
+}
+
+
+
+3) Descubra a lógica e complete o próximo elemento:
+
+
+
+a) 1, 3, 5, 7, 9. Resposta: 9, a sequência cresce de 2 em 2, números impares, pula o número par.
+
+b) 2, 4, 8, 16, 32, 64, 128. Resposta: 128, a lógica é: os números são os resultados das potências de 2, nesse caso 2^7.
+
+c) 0, 1, 4, 9, 16, 25, 36, 49. Resposta:49. os numeros são resultados da soma com uma sequência de números ímpares (+1, +3, +5, +7, +9 e assim por diante).
+
+d) 4, 16, 36, 64, 100. Resposta: 100, os números são resultados dos números pares elvados ao quadrado.
+
+e) 1, 1, 2, 3, 5, 8, 13. Resposta: 13. cada número é o resultado da soma com os 2 números anteriores.
+
+f) 2,10, 12, 16, 17, 18, 19, 200. Resposta: 200, a sequência está de acordo com  a letra inicial do númnero escrito por extenso.
+
+
+
+4) Você está em uma sala com três interruptores, cada um conectado a uma lâmpada em uma sala diferente.
+Você não pode ver as lâmpadas da sala em que está, mas pode ligar e desligar os interruptores quantas vezes quiser. 
+Seu objetivo é descobrir qual interruptor controla qual lâmpada.
+
+Como você faria para descobrir, usando apenas duas idas até uma das salas das lâmpadas, qual interruptor controla cada lâmpada?
+
+Resposta:
+
+1ª ida:
+Ligo o interruptor 1 e o deixo ligado por alguns minutos, ligo o interruptor 2 e o desligo, vou para uma das salas.
+
+Se a lâmpada estiver ligada, pertence ao interruptor 2.
+Se estiver desligada e quente, pertence ao interruptor 1.
+Se estiver desligada e fria, pertence ao interruptor 3.
+
+Encontrarei a 1º lamapada que pertence a um dos interruptores.
+
+2ª ida:
+Já vou saber a qual lâmpada pertence um dos interruptores.
+Repito o processo usando interruptores diferentes, e novamente, encontrarei a 2º lâmpada que pertence a um dos interruptores.
+A lampa que sobrar, saberei automaticamente a qual interruptor pertence, pois será o interruptor que não acendeu as outras duas lâmpadas. 
+
+
+
+5) Escreva um programa que inverta os caracteres de um string.
+
+
+IMPORTANTE:
+
+a) Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser previamente definida no código;
+
+b) Evite usar funções prontas, como, por exemplo, reverse;
+
+
+Resposta:
+
+import java.util.Scanner;
+
+class InverterPalavras {
+    public static void main(String[] args) {
+        String s;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Diga uma palavra: ");
+        s = sc.nextLine();
+        System.out.print("Resultado da inversão: ");
+        int i = s.length();
+        while (i > 0) {
+            System.out.print(s.charAt(i - 1));
+            i--;
+        }
+    }
+}
